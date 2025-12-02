@@ -1,0 +1,24 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) important;
+
+@theme {
+  --color-accent: oklch(54.6% 0.245 262.881);
+  --color-background: oklch(96.7% 0.003 264.542);
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+button{
+    cursor: pointer;
+}
