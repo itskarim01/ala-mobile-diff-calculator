@@ -1,3 +1,34 @@
+# Ala Mobile Difficulty Calculator
+
+A responsive React + TypeScript web app for calculating recommended difficulty settings for tracks in the Ala Mobile GP racing game.
+
+## Features
+- **Track Selection:** Choose from a list of tracks, each with its country flag displayed.
+- **Difficulty Calculator:** Enter your lap times to get a recommended difficulty for each track.
+- **History:** View and clear your calculation history, sorted by date and time.
+- **Responsive Design:** Mobile and desktop friendly using Tailwind CSS.
+- **Country Flags:** Flags are shown for each track using `react-country-flag`.
+
+## Usage
+1. Select a track from the home page.
+2. Enter your lap time(s) in the format `m:ss.xxx` (e.g., `1:23.456`).
+3. Click "Calculate" to see your recommended difficulty.
+4. Your calculations are saved in history, which you can view or clear.
+
+## Tech Stack
+- React + TypeScript
+- Vite
+- Tailwind CSS
+- react-country-flag
+- ESLint
+
+## Development
+- Clone the repo and run `npm install`.
+- Start the dev server with `npm run dev`.
+- Build for production with `npm run build`.
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
