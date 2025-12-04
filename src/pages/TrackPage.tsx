@@ -12,6 +12,24 @@ export default function TrackPage() {
   const [laps, setLaps] = useState("");
   const [result, setResult] = useState<number|null>(null);
 
+  const formatLapTime = (value: string): string => {
+    // keep only digits
+    const digits = value.replace(/\D/g, "");
+
+    if (digits.length <= 1) {
+      return digits;
+    } else if (digits.length <= 3) {
+      return digits[0] + ":" + digits.slice(1);
+    } else {
+      return digits[0] + ":" + digits.slice(1, 3) + "." + digits.slice(3, 6);
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatLapTime(e.target.value);
+    setLaps(formatted);
+  }
+
   const calculate = () => {
     try {
       const parsed = laps.split(",").map(parseLapTime);
@@ -54,9 +72,9 @@ export default function TrackPage() {
         </p>
         <input 
           value={laps} 
-          onChange={e=>setLaps(e.target.value)} 
+          onChange={handleInputChange} 
           placeholder="1:23.456" 
-          className="p-2 border-2 rounded-2xl bg-gray-300 text-lg w-full max-w-xs"
+          className="p-2 border-2 rounded-2xl bg-gray-300 text-lg w-full max-w-xs text-center"
         />
         <br/>
         <button className="p-2 border-2 text-lg rounded-2xl mt-3 md:mt-5 font-semibold transition-all duration-250 bg-background hover:bg-gray-300 w-full max-w-xs" onClick={calculate}>Calculate</button>
