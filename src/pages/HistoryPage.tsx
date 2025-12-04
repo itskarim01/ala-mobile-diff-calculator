@@ -1,16 +1,20 @@
 import "../index.css"
+import { useState } from "react";
 import capitalize from "../logic/capitalize";
 import Header from "../components/Header";
 
 export default function HistoryPage() {
-  let history = JSON.parse(localStorage.getItem("history") || "[]");
+  
+const [history, setHistory] = useState<History[]>(() => {
+  return JSON.parse(localStorage.getItem("history") || "[]");
+});
 
   // Sort history by datetime descending
-  history = history.sort((a: any, b: any) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime());
+  history.sort((a: any, b: any) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime());
 
   const clearHistory = () => {
+  setHistory([])
     localStorage.removeItem("history");
-    window.location.reload();
   };
 
   return (
