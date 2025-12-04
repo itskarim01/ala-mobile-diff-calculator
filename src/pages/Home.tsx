@@ -25,13 +25,13 @@ export default function Home() {
             return (
               <Link
                 key={track}
-                className="text-lg border-2 border-accent rounded-2xl p-2.5 font-bold max-sm:text-lg bg-background flex items-center gap-2 hover:bg-accent hover:text-white transition duration-250"
+                className="text-lg border-2 border-accent rounded-2xl p-2.5 font-bold max-sm:text-sm bg-background flex items-center gap-2 hover:bg-accent hover:text-white transition duration-250"
                 to={`/track/${track}`}
               >
                 <CountryFlag
                   countryCode={countryCode.toUpperCase()}
                   svg
-                  className="w-12 max-md:w-9 max-sm:w-10 h-fit border-2 rounded-2xl"
+                  className="w-12 max-md:w-9 max-sm:w-9 h-fit border-2 rounded-2xl"
                 />
                 {capitalize(track)}
               </Link>
