@@ -77,7 +77,7 @@ export default function TrackPage() {
           className="p-2 border-2 rounded-2xl bg-gray-300 text-lg w-full max-w-xs text-center"
         />
         <br/>
-        <button className="p-2 border-2 text-lg rounded-2xl mt-3 md:mt-5 font-semibold transition-all duration-250 bg-background hover:bg-gray-300 w-full max-w-xs" onClick={calculate}>Calculate</button>
+        <button className="p-2 border-2 text-lg rounded-2xl mt-3 md:mt-5 font-semibold transition-all duration-250 text-white bg-accent hover:bg-background hover:text-accent w-full max-w-xs" onClick={calculate}>Calculate</button>
       </section>
     </div>
   );

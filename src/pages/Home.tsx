@@ -26,7 +26,7 @@ export default function Home() {
               <Link
                 key={track}
                 className="text-lg border-2 border-accent rounded-2xl p-2.5 font-bold max-sm:text-sm bg-background flex items-center gap-2 hover:bg-accent hover:text-white transition duration-250"
-                to={`/track/${track}`}
+                to={`/difficulty/${track}`}
               >
                 <CountryFlag
                   countryCode={countryCode.toUpperCase()}
