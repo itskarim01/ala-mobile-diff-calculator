@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Header />
       <div style={{ textAlign: "center", margin: "30px" }}>
-        <p className="text-lg w-2/4 ml-auto mr-auto max-md:text-md max-sm:text-ms">
+        <p className="text-lg w-2/4 ml-auto mr-auto max-md:text-md max-sm:text-ms max-sm:w-full" >
           A Difficulty Calculator For Ala Mobile GP formula facing game that
           gives you your ideal difficulty for each track in the game
         </p>
