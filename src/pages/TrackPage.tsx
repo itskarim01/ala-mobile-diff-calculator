@@ -61,10 +61,10 @@ export default function TrackPage() {
         <h1 className="mb-3 md:mb-5 text-lg md:text-2xl">{capitalize(trackId)} Difficulty Calculator</h1>
         <div>
           <p className="mb-3 md:mb-5">To get your recommended difficulty for {capitalize(trackId)}:</p>
-          <ol className="text-left w-full md:w-fit mx-auto mb-3 md:mb-5 text-sm md:text-base">
-            <li>Set A lap time in a Free Practice Session on Race Weekend Mode or Champoinship Mode in Ala Mobile</li>
-            <li>Enter your lap time in the input field to calculate your recommended Difficulty</li>
-            <li>Test your difficulty in the game and adjust the difficulty if necessary</li>
+          <ol className="text-left w-full md:w-fit mx-auto space-y-1 mb-3 md:mb-5 text-sm md:text-base max-sm:mx-10 max-sm:w-fit">
+            <li>Set A lap time in a Free Practice Session on Race Weekend Mode or Champoinship Mode in Ala Mobile.</li>
+            <li>Enter your lap time in the input field to calculate your recommended Difficulty.</li>
+            <li>Test your difficulty in the game and adjust the difficulty if needed.</li>
           </ol>
         </div>
         <p>
